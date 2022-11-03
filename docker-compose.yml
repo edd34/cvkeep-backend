@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-cv-keep
+    volumes:
+      - ../data/db:/data/db
+    networks:
+      - cvkeep-backend-net
+    ports:
+      - 27017:27017
+  # backend:
+  #   build: .
+  #   container_name: lahiki-backend
+  #   networks:
+  #     - cvkeep-backend-net
+  #   ports:
+  #     - 5000:5000
+  #   depends_on:
+  #     - mongo
+  #   command: "npm run serve"
+
+networks:
+  cvkeep-backend-net:
+    external: true
