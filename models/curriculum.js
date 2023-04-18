@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const CurriculumSchema = new mongoose.Schema({
+	pro: { type: Boolean, default: true },
 	lang: { type: String, default: '' },
 	views: { type: Number, default: 0 },
 	email: { type: String, required: true },
@@ -40,34 +41,57 @@ const CurriculumSchema = new mongoose.Schema({
 	presentation: {
 		max_length: { type: Number, default: 500 },
 		description: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
 	},
 	education: {
 		items: { type: Array },
 		introduction: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
 	},
 	languages: {
 		items: { type: Array },
 		introduction: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
 	},
 	experience: {
 		items: { type: Array },
 		introduction: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
 	},
 	skills: {
 		items: { type: Array },
 		introduction: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
 	},
 	prizes: {
 		items: { type: Array },
 		introduction: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
 	},
 	portfolio: {
 		items: { type: Array },
 		introduction: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
 	},
 	links: {
 		items: { type: Array },
 		introduction: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
+	},
+	projet: {
+		max_length: { type: Number, default: 2000 },
+		description: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
+	},
+	hobby: {
+		max_length: { type: Number, default: 500 },
+		description: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
+	},
+	jobs: {
+		max_length: { type: Number, default: 500 },
+		description: { type: String, default: '' },
+		customTitle: { type: String, default: '' },
 	},
 });
 
